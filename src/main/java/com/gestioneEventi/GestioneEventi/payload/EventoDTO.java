@@ -19,7 +19,7 @@ public class EventoDTO {
     private String luogo;
     @NotBlank(message = "⚠️Il campo 'citta' è obbligatorio⚠️")
     private String citta;
-    @NotBlank(message = "⚠️Il campo 'capacita' è obbligatorio⚠️")
+    @NotNull(message = "⚠️Il campo 'capacita' è obbligatorio⚠️")
     private int capacita;
     private Utente organizzatore;
 }

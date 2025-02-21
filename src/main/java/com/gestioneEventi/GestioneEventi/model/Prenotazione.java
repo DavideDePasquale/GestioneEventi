@@ -6,10 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Entity(name = "prenotazioni")
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "prenotazioni")
 public class Prenotazione {
 
     @Id

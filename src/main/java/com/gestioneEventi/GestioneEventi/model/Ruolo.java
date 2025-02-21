@@ -6,17 +6,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity(name = "ruoli")
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "ruoli")
 public class Ruolo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idruolo;
     @Enumerated(EnumType.STRING)
-    private ERuolo ruolo;
+    private ERuolo tipo;
 
     public Ruolo(Long idruolo) {
         this.idruolo = idruolo;

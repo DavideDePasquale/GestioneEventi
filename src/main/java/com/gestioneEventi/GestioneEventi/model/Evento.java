@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Entity(name = "eventi")
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "eventi")
 public class Evento {
 
     @Id
@@ -27,6 +28,8 @@ public class Evento {
     @Column(nullable = false)
     private int capacita;
 
+    @ManyToOne
+    @JoinColumn(name = "organizzatore_id")
     private Utente organizzatore;
 
     public Evento(Long idevento) {

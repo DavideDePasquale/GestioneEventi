@@ -15,7 +15,7 @@ public class UtenteMapperDTO {
         dto.setUsername(entity.getUsername());
         dto.setEmail(entity.getEmail());
         dto.setPassword(entity.getPassword());
-        dto.setRuolo(entity.getRuolo());
+//        dto.setRuolo(entity.getRuolo());
         return dto;
     }
 
@@ -27,7 +27,7 @@ public class UtenteMapperDTO {
         entity.setUsername(dto.getUsername());
         entity.setEmail(dto.getEmail());
         entity.setPassword(dto.getPassword());
-        entity.setRuolo(dto.getRuolo());
+//        entity.setRuolo(dto.getRuolo());
         return entity;
     }
 }
