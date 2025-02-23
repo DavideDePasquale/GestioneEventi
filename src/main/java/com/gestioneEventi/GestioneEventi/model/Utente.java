@@ -5,10 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity(name = "utenti")
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "utenti")
 public class Utente {
 
     @Id
@@ -24,6 +25,8 @@ public class Utente {
     private String username;
     @Column(nullable = false)
     private String password;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ruolo_id")
     private Ruolo ruolo;
 
 
